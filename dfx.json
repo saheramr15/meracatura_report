@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "mera_report_backend": {
+      "candid": "src/mera_report_backend/mera_report_backend.did",
+      "package": "mera_report_backend",
+      "type": "rust"
+    },
+    "mera_report_frontend": {
+      "dependencies": [
+        "mera_report_backend"
+      ],
+      "source": [
+        "src/mera_report_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "mera_report_frontend"
+    },
+  "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "type": "custom",
+      "specified_id": "rdmx6-jaaaa-aaaaa-aaadq-cai",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

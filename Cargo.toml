@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/mera_report_backend"
+]
+resolver = "2"
